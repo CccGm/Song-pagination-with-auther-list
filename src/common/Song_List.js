@@ -1,6 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
+import Image from 'react-native-image-placeholder';
 
 export const Song_List = props => {
   const DATA = props.data.item;
@@ -23,15 +24,16 @@ export const Song_List = props => {
             alignItems: 'center',
             width: 85,
             height: 85,
+            padding: 10,
             marginHorizontal: 10,
           }}>
           <Image
             style={{
-              borderWidth: 1,
-              width: '80%',
-              height: '80%',
-              borderRadius: 50,
+              width: '100%',
+              height: '100%',
             }}
+            borderRadius={50}
+            loadingStyle={{size: 'large', color: 'blue'}}
             resizeMode="contain"
             source={{uri: DATA.artworkUrl100}}
           />
