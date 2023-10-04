@@ -8,10 +8,9 @@ var Sound = require('react-native-sound');
 
 export const Detail_Screen = props => {
   const PROPS = props.route.params.DATA;
+  const dispatch = useDispatch();
   const {AUTH_DATA} = useSelector(state => state.Data_Reducer);
   const {loading} = useSelector(state => state.Action_Reducer);
-  const dispatch = useDispatch();
-
   const [soundPlay, setSoundPlay] = useState(false);
 
   useEffect(() => {

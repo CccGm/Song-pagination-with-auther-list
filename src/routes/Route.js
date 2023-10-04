@@ -6,7 +6,6 @@ import {Detail_Screen} from '../screen/Detail_Screen';
 
 export const Route = () => {
   const Stack = createNativeStackNavigator();
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home_Screen">

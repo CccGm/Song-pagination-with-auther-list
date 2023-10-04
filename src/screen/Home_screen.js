@@ -8,7 +8,6 @@ import {Songs_Data} from '../common/Songs_Data';
 export const Home_screen = () => {
   const dispatch = useDispatch();
   const {loading, error} = useSelector(state => state.Action_Reducer);
-
   useEffect(() => {
     dispatch(Api_Call());
   }, []);
