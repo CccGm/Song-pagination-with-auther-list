@@ -9,7 +9,6 @@ export const Home_screen = () => {
   const dispatch = useDispatch();
   const {loading, error} = useSelector(state => state.Action_Reducer);
 
-  console.log(loading, '|loading??');
   useEffect(() => {
     dispatch(Api_Call());
   }, []);

@@ -10,7 +10,12 @@ const Data_Reducer = (state = initialstate, {type, payload}) => {
         ...state,
         DATA: payload,
       };
-    case 'auth_success':
+    case 're_api_call':
+      return {
+        ...state,
+        DATA: [...state.DATA, ...payload],
+      };
+    case 'auther_success':
       return {
         ...state,
         AUTH_DATA: payload,

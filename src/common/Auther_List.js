@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, View} from 'react-native';
 
 export const Auther_List = props => {
   const DATA = props.data.item;

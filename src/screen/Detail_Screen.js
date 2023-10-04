@@ -17,16 +17,19 @@ export const Detail_Screen = props => {
   return (
     <View style={{flex: 1}}>
       <View
-        style={{justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 20,
+        }}>
         <Text style={{fontSize: 24, color: 'black', fontWeight: 'bold'}}>
           {PROPS.trackName}
-          {PROPS.artistId}
         </Text>
       </View>
       <View
         style={{
           height: '50%',
-          padding: 30,
+          padding: 25,
         }}>
         <Image
           source={{uri: PROPS.artworkUrl100}}
@@ -34,14 +37,17 @@ export const Detail_Screen = props => {
           style={{width: '100%', height: '100%', borderRadius: 25}}
         />
       </View>
-      {loading ? null : (
-        <FlatList
-          data={AUTH_DATA}
-          renderItem={item => <Auther_List data={item} />}
-          keyExtractor={item => item.trackTimeMillis}
-          horizontal={true}
-        />
-      )}
+      <View>
+        {loading ? null : (
+          <FlatList
+            data={AUTH_DATA}
+            renderItem={item => <Auther_List data={item} />}
+            keyExtractor={item => item.trackTimeMillis}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+          />
+        )}
+      </View>
     </View>
   );
 };
